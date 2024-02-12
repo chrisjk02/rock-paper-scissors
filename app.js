@@ -3,14 +3,19 @@ function getComputerChoice() {
     const num = Math.floor(Math.random() * 3);
     //using generated number:
     if (num === 0) {
-        return 'Rock';
+        return 'rock';
     } else if (num === 1) {
-        return 'Paper';
+        return 'paper';
     } else if (num === 2) {
-        return 'Scissors';
+        return 'scissors';
     } else {
         return 'No valid number';
     }
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+function rockPaperScissors(playerSelection, computerSelection) {
+    const playerMove = playerSelection.toLowerCase();
+    const compMove = getComputerChoice();
+}
