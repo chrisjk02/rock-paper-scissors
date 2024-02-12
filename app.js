@@ -55,7 +55,7 @@ function playGame() {
         if (roundWinner === 'Player') {
             playerScore += 1;
         } else if (roundWinner === 'Computer') {
-            playerScore += 1;
+            compScore += 1;
         }
 
         //display updated scores
@@ -73,3 +73,5 @@ function playGame() {
     }
 
 }
+
+playGame();
