@@ -22,9 +22,9 @@ function playRound(playerSelection, computerSelection) {
     if (playerMove === compMove) {
         return 'Tie!';
     } else if (playerMove > compMove) {
-        return 'Player wins!';
+        return 'Player';
     } else if (playerMove < compMove) {
-        return 'Computer wins!';
+        return 'Computer';
     }
 }
 
@@ -47,10 +47,17 @@ function playGame() {
     // loop playRound five times
     for (let i = 1; i < 6; i++) {
         // get user input
-
+        let input = prompt("Rock, paper or scissors?");
         //call playRound
+        let roundWinner = playRound(input, getComputerChoice());
         //print result of round
+        console.log(`Winner of R${i}: ${roundWinner}`);
         // update score of winner
+        if (roundWinner === 'Player') {
+            playerScore += 1;
+        } else if (roundWinner === 'Computer') {
+            playerScore += 1;
+        }
     }
     //display results of each game
     // determine winner and display in console
