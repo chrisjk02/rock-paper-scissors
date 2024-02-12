@@ -19,3 +19,13 @@ function rockPaperScissors(playerSelection, computerSelection) {
     const playerMove = playerSelection.toLowerCase();
     const compMove = getComputerChoice();
 }
+
+function selectionToNum(selection) {
+    if (selection === 'rock') {
+        return 0;
+    } else if (selection === 'paper') {
+        return 1;
+    } else {
+        return 2;
+    }
+}
