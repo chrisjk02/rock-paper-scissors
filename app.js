@@ -23,7 +23,7 @@ function playRound(playerSelection, computerSelection) {
         return 'Tie!';
     } else if (playerMove > compMove) {
         return 'Player wins!';
-    } else {
+    } else if (playerMove < compMove) {
         return 'Computer wins!';
     }
 }
@@ -33,7 +33,7 @@ function selectionToNum(selection) {
         return 0;
     } else if (selection === 'paper') {
         return 1;
-    } else {
+    } else if (selection === 'scissors') {
         return 2;
     }
 }
