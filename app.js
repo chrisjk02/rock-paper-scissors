@@ -63,6 +63,7 @@ function playGame() {
         console.log(`Computer: ${compScore}`);
     }
     // determine winner and display in console
+    console.log(`Final results: Player: ${playerScore} vs Computer: ${compScore}`);
     if (playerScore > compScore) {
         console.log('Player wins!');
     } else if (compScore > playerScore) {
