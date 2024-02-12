@@ -17,7 +17,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     const playerMove = selectionToNum(playerSelection.toLowerCase());
-    const compMove = selectionToNum(getComputerChoice());
+    const compMove = selectionToNum(computerSelection);
 
     if (playerMove === compMove) {
         return 'Tie!';
@@ -39,5 +39,11 @@ function selectionToNum(selection) {
 }
 
 function playGame() {
+    // keep score
+    let playerScore = 0;
+    let compScore = 0;
+    // loop playRound five times
+    //display results of each game
+    // determine winner and display in console
 
 }
