@@ -15,7 +15,7 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice());
 
-function rockPaperScissors(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     const playerMove = selectionToNum(playerSelection.toLowerCase());
     const compMove = selectionToNum(getComputerChoice());
 
