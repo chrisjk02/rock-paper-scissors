@@ -21,7 +21,7 @@ function rockPaperScissors(playerSelection, computerSelection) {
 
     if (playerMove === compMove) {
         return 'Tie!';
-    } else if (playerMove >= compMove) {
+    } else if (playerMove > compMove) {
         return 'Player wins!';
     } else {
         return 'Computer wins!';
