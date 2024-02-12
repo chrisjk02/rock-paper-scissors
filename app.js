@@ -39,7 +39,6 @@ function selectionToNum(selection) {
 }
 
 function playGame() {
-
     // keep score
     let playerScore = 0;
     let compScore = 0;
@@ -58,8 +57,18 @@ function playGame() {
         } else if (roundWinner === 'Computer') {
             playerScore += 1;
         }
+
+        //display updated scores
+        console.log(`Player: ${playerScore}`);
+        console.log(`Computer: ${compScore}`);
     }
-    //display results of each game
     // determine winner and display in console
+    if (playerScore > compScore) {
+        console.log('Player wins!');
+    } else if (compScore > playerScore) {
+        console.log('Computer wins!');
+    } else {
+        console.log('Tie!');
+    }
 
 }
