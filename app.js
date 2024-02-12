@@ -18,6 +18,14 @@ function getComputerChoice() {
 function rockPaperScissors(playerSelection, computerSelection) {
     const playerMove = selectionToNum(playerSelection.toLowerCase());
     const compMove = selectionToNum(getComputerChoice());
+
+    if (playerMove === compMove) {
+        return 'Tie!';
+    } else if (playerMove >= compMove) {
+        return 'Player wins!';
+    } else {
+        return 'Computer wins!';
+    }
 }
 
 function selectionToNum(selection) {
