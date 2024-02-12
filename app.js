@@ -37,3 +37,7 @@ function selectionToNum(selection) {
         return 2;
     }
 }
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
