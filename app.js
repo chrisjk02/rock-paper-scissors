@@ -39,10 +39,19 @@ function selectionToNum(selection) {
 }
 
 function playGame() {
+
     // keep score
     let playerScore = 0;
     let compScore = 0;
+
     // loop playRound five times
+    for (let i = 1; i < 6; i++) {
+        // get user input
+
+        //call playRound
+        //print result of round
+        // update score of winner
+    }
     //display results of each game
     // determine winner and display in console
 
