@@ -16,6 +16,9 @@ function getComputerChoice() {
 // console.log(getComputerChoice());
 
 function playRound(playerSelection, computerSelection) {
+    console.log(`You played: ${playerSelection}`);
+    console.log(`Computer played: ${computerSelection}`);
+
     const playerMove = selectionToNum(playerSelection.toLowerCase());
     const compMove = selectionToNum(computerSelection);
 
