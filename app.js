@@ -19,8 +19,8 @@ function playRound(playerSelection, computerSelection) {
     console.log(`You played: ${playerSelection}`);
     console.log(`Computer played: ${computerSelection}`);
 
-    const playerMove = selectionToNum(playerSelection.toLowerCase());
-    const compMove = selectionToNum(computerSelection);
+    const playerMove = playerSelection.toLowerCase();
+    const compMove = computerSelection;
 
     if (playerMove === compMove) {
         return 'Tie!';
