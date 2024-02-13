@@ -1,7 +1,6 @@
 function getComputerChoice() {
-    //generate random number from 0-2 (inclusive)
     const num = Math.floor(Math.random() * 3);
-    //using generated number:
+
     if (num === 0) {
         return 'rock';
     } else if (num === 1) {
@@ -12,8 +11,6 @@ function getComputerChoice() {
         return 'No valid number';
     }
 }
-
-// console.log(getComputerChoice());
 
 function playRound(playerSelection, computerSelection) {
     console.log(`You played: ${playerSelection}`);
@@ -47,31 +44,26 @@ function selectionToNum(selection) {
 }
 
 function playGame() {
-    // keep score
     let playerScore = 0;
     let compScore = 0;
 
-    // loop playRound five times
     for (let i = 1; i < 6; i++) {
-        // get user input
         let input = prompt("Rock, paper or scissors?");
-        //call playRound
+
         console.log(`***** Round ${i} *****`)
         let roundWinner = playRound(input, getComputerChoice());
-        //print result of round
         console.log(`Winner of R${i}: ${roundWinner}`);
-        // update score of winner
+
         if (roundWinner === 'Player') {
             playerScore += 1;
         } else if (roundWinner === 'Computer') {
             compScore += 1;
         }
 
-        //display updated scores
         console.log(`Player: ${playerScore}`);
         console.log(`Computer: ${compScore}`);
     }
-    // determine winner and display in console
+
     console.log(`Final results: Player: ${playerScore} vs Computer: ${compScore}`);
     if (playerScore > compScore) {
         console.log('Player wins!');
