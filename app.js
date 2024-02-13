@@ -56,6 +56,7 @@ function playGame() {
         // get user input
         let input = prompt("Rock, paper or scissors?");
         //call playRound
+        console.log(`***** Round ${i} *****`)
         let roundWinner = playRound(input, getComputerChoice());
         //print result of round
         console.log(`Winner of R${i}: ${roundWinner}`);
