@@ -24,10 +24,15 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerMove === compMove) {
         return 'Tie!';
-    } else if (playerMove > compMove) {
-        return 'Player';
-    } else if (playerMove < compMove) {
-        return 'Computer';
+    } else if (playerMove === 'rock') {
+        if (compMove === 'scissors') { return 'Player'; }
+        else { return 'Computer' };
+    } else if (playerMove === 'paper') {
+        if (compMove === 'rock') { return 'Player'; }
+        else { return 'Computer'; }
+    } else {
+        if (compMove === 'paper') { return 'Player'; }
+        else { return 'Computer'; }
     }
 }
 
