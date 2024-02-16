@@ -16,19 +16,16 @@ function playRound(playerSelection, computerSelection) {
     console.log(`You played: ${playerSelection}`);
     console.log(`Computer played: ${computerSelection}`);
 
-    const playerMove = playerSelection;
-    const compMove = computerSelection;
-
-    if (playerMove === compMove) {
+    if (playerSelection === computerSelection) {
         return 'Tie!';
-    } else if (playerMove === 'rock') {
-        if (compMove === 'scissors') { return 'Player'; }
+    } else if (playerSelection === 'rock') {
+        if (computerSelection === 'scissors') { return 'Player'; }
         else { return 'Computer' };
-    } else if (playerMove === 'paper') {
-        if (compMove === 'rock') { return 'Player'; }
+    } else if (playerSelection === 'paper') {
+        if (computerSelection === 'rock') { return 'Player'; }
         else { return 'Computer'; }
     } else {
-        if (compMove === 'paper') { return 'Player'; }
+        if (computerSelection === 'paper') { return 'Player'; }
         else { return 'Computer'; }
     }
 }
@@ -63,9 +60,9 @@ function playGame() {
     btnScissors.value = 'scissors';
     content.appendChild(btnScissors);
 
-    btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice) });
-    btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice) });
-    btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice) });
+    btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice()) });
+    btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice()) });
+    btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice()) });
 
     // for (let i = 1; i < 6; i++) {
     //     let input = prompt("Rock, paper or scissors?");
