@@ -47,21 +47,28 @@ function playGame() {
     let playerScore = 0;
     let compScore = 0;
 
+    const btnRock = document.createElement('button');
+    btnRock.innerText = 'Rock';
+    const btnPaper = document.createElement('button');
+    btnPaper.innerText = 'Paper';
+    const btnScissors = document.createElement('button');
+    btnScissors.innerText = 'Scissors';
+
     // for (let i = 1; i < 6; i++) {
-    let input = prompt("Rock, paper or scissors?");
+    //     let input = prompt("Rock, paper or scissors?");
 
-    console.log(`***** Round ${i} *****`)
-    let roundWinner = playRound(input, getComputerChoice());
-    console.log(`Winner of R${i}: ${roundWinner}`);
+    //     console.log(`***** Round ${i} *****`)
+    //     let roundWinner = playRound(input, getComputerChoice());
+    //     console.log(`Winner of R${i}: ${roundWinner}`);
 
-    if (roundWinner === 'Player') {
-        playerScore += 1;
-    } else if (roundWinner === 'Computer') {
-        compScore += 1;
-    }
+    //     if (roundWinner === 'Player') {
+    //         playerScore += 1;
+    //     } else if (roundWinner === 'Computer') {
+    //         compScore += 1;
+    //     }
 
-    console.log(`Player: ${playerScore}`);
-    console.log(`Computer: ${compScore}`);
+    //     console.log(`Player: ${playerScore}`);
+    //     console.log(`Computer: ${compScore}`);
     // }
 
     console.log(`Final results: Player: ${playerScore} vs Computer: ${compScore}`);
