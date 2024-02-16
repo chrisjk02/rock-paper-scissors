@@ -46,13 +46,17 @@ function selectionToNum(selection) {
 function playGame() {
     let playerScore = 0;
     let compScore = 0;
+    const content = document.querySelector('.container');
 
     const btnRock = document.createElement('button');
     btnRock.innerText = 'Rock';
+    content.appendChild(btnRock);
     const btnPaper = document.createElement('button');
     btnPaper.innerText = 'Paper';
+    content.appendChild(btnPaper);
     const btnScissors = document.createElement('button');
     btnScissors.innerText = 'Scissors';
+    content.appendChild(btnScissors);
 
     // for (let i = 1; i < 6; i++) {
     //     let input = prompt("Rock, paper or scissors?");
