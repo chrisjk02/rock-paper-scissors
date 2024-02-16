@@ -12,6 +12,9 @@ function getComputerChoice() {
     }
 }
 
+let playerScore = 0;
+let compScore = 0;
+
 function playRound(playerSelection, computerSelection) {
     console.log(`You played: ${playerSelection}`);
     console.log(`Computer played: ${computerSelection}`);
@@ -19,21 +22,31 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return 'Tie!';
     } else if (playerSelection === 'rock') {
-        if (computerSelection === 'scissors') { return 'Player'; }
-        else { return 'Computer' };
+        if (computerSelection === 'scissors') {
+            return 'Player';
+        }
+        else {
+            return 'Computer'
+        };
     } else if (playerSelection === 'paper') {
-        if (computerSelection === 'rock') { return 'Player'; }
-        else { return 'Computer'; }
+        if (computerSelection === 'rock') {
+            return 'Player';
+        }
+        else {
+            return 'Computer';
+        }
     } else {
-        if (computerSelection === 'paper') { return 'Player'; }
-        else { return 'Computer'; }
+        if (computerSelection === 'paper') {
+            return 'Player';
+        }
+        else {
+            return 'Computer';
+        }
     }
 }
 
 
 function playGame() {
-    let playerScore = 0;
-    let compScore = 0;
     const content = document.querySelector('.container');
 
 
