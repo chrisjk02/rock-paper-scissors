@@ -59,9 +59,9 @@ function playRound(playerSelection, computerSelection) {
 
 
 function playGame(input) {
-    playRound(input, getComputerChoice());
-
-    isGameOver();
+    if (!isGameOver()) {
+        playRound(input, getComputerChoice());
+    }
 }
 
 function isGameOver() {
