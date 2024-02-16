@@ -15,6 +15,13 @@ function getComputerChoice() {
 let playerScore = 0;
 let compScore = 0;
 
+function updateScoreboard() {
+    const pscore = document.querySelector('#pscore');
+    const cscore = document.querySelectorO('#cscore');
+    pscore.innerText = playerScore;
+    cscore.innerText = compScore;
+}
+
 function playRound(playerSelection, computerSelection) {
     console.log(`You played: ${playerSelection}`);
     console.log(`Computer played: ${computerSelection}`);
@@ -73,8 +80,6 @@ function playGame() {
     btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice()) });
     btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice()) });
     btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice()) });
-
-
 
     // for (let i = 1; i < 6; i++) {
     //     let input = prompt("Rock, paper or scissors?");
