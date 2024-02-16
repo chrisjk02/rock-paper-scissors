@@ -16,7 +16,7 @@ function playRound(playerSelection, computerSelection) {
     console.log(`You played: ${playerSelection}`);
     console.log(`Computer played: ${computerSelection}`);
 
-    //const playerMove = playerSelection.toLowerCase();
+    const playerMove = playerSelection;
     const compMove = computerSelection;
 
     if (playerMove === compMove) {
@@ -63,9 +63,9 @@ function playGame() {
     btnScissors.value = 'scissors';
     content.appendChild(btnScissors);
 
-    btnRock.addEventListener('click', () => { playRound });
-    btnPaper.addEventListener('click', () => { playRound });
-    btnScissors.addEventListener('click', () => { playRound });
+    btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice) });
+    btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice) });
+    btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice) });
 
     // for (let i = 1; i < 6; i++) {
     //     let input = prompt("Rock, paper or scissors?");
