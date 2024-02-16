@@ -59,25 +59,13 @@ function playRound(playerSelection, computerSelection) {
 
 
 function playGame() {
-    // const content = document.querySelector('.container');
-
-    // const btnRock = document.createElement('button');
-    // btnRock.innerText = 'Rock';
-    // btnRock.value = 'rock';
-    // content.appendChild(btnRock);
-
-    // const btnPaper = document.createElement('button');
-    // btnPaper.innerText = 'Paper';
-    // btnPaper.value = 'paper';
-    // content.appendChild(btnPaper);
-
-    // const btnScissors = document.createElement('button');
-    // btnScissors.innerText = 'Scissors';
-    // btnScissors.value = 'scissors';
-    // content.appendChild(btnScissors);
 
     // btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice()) });
     // btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice()) });
     // btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice()) });
     playRound(input, getComputerChoice());
 }
+
+const rockbutton = document.querySelector('#rock');
+const paperbutton = document.querySelector('#paper');
+const scissorsbutton = document.querySelector('#scissors');
