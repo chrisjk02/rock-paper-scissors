@@ -34,6 +34,7 @@ function playGame() {
     let playerScore = 0;
     let compScore = 0;
     const content = document.querySelector('.container');
+    const resultsDiv = document.querySelector('.results');
 
     const btnRock = document.createElement('button');
     btnRock.innerText = 'Rock';
