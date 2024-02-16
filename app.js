@@ -27,7 +27,7 @@ function playRound(playerSelection, computerSelection) {
     console.log(`Computer played: ${computerSelection}`);
 
     if (playerSelection === computerSelection) {
-        return 'Tie!';
+        return 'Tie!'
     } else if (playerSelection === 'rock') {
         if (computerSelection === 'scissors') {
             playerScore += 1;
@@ -97,15 +97,6 @@ function playGame() {
     //     console.log(`Player: ${playerScore}`);
     //     console.log(`Computer: ${compScore}`);
     // }
-
-    console.log(`Final results: Player: ${playerScore} vs Computer: ${compScore}`);
-    if (playerScore > compScore) {
-        console.log('Player wins!');
-    } else if (compScore > playerScore) {
-        console.log('Computer wins!');
-    } else {
-        console.log('Tie!');
-    }
 
 }
 
