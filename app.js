@@ -79,6 +79,5 @@ function playGame() {
     // btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice()) });
     // btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice()) });
     // btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice()) });
+    playRound(input, getComputerChoice());
 }
-
-playGame();
