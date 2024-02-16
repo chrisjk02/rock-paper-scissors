@@ -14,10 +14,11 @@ function getComputerChoice() {
 
 let playerScore = 0;
 let compScore = 0;
+let roundWinner = '';
 
 function updateScoreboard(player, computer) {
     const pscore = document.querySelector('#pscore');
-    const cscore = document.querySelectorO('#cscore');
+    const cscore = document.querySelector('#cscore');
     pscore.innerText = playerScore;
     cscore.innerText = compScore;
 
@@ -28,39 +29,32 @@ function updateScoreboard(player, computer) {
 }
 
 function playRound(playerSelection, computerSelection) {
-    console.log(`You played: ${playerSelection}`);
-    console.log(`Computer played: ${computerSelection}`);
-
     if (playerSelection === computerSelection) {
-        return 'Tie!'
+        roundWinner = 'Tie';
     } else if (playerSelection === 'rock') {
         if (computerSelection === 'scissors') {
             playerScore += 1;
-            return 'Player';
         }
         else {
             compScore += 1;
-            return 'Computer'
         };
     } else if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
             playerScore += 1;
-            return 'Player';
         }
         else {
             compScore += 1;
-            return 'Computer';
         }
     } else {
         if (computerSelection === 'paper') {
             playerScore += 1;
-            return 'Player';
         }
         else {
             compScore += 1;
-            return 'Computer';
         }
     }
+
+    updateScoreboard(playerSelection, computerSelection);
 }
 
 
@@ -85,7 +79,6 @@ function playGame() {
     btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice()) });
     btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice()) });
     btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice()) });
-
 }
 
 playGame();
