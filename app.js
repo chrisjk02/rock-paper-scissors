@@ -15,11 +15,16 @@ function getComputerChoice() {
 let playerScore = 0;
 let compScore = 0;
 
-function updateScoreboard() {
+function updateScoreboard(player, computer) {
     const pscore = document.querySelector('#pscore');
     const cscore = document.querySelectorO('#cscore');
     pscore.innerText = playerScore;
     cscore.innerText = compScore;
+
+    const userMove = document.querySelector('.user-move span');
+    const compMove = document.querySelector('.comp-move span');
+    userMove.innerText = player;
+    compMove.innerText = computer;
 }
 
 function playRound(playerSelection, computerSelection) {
