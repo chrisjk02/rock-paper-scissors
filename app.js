@@ -60,6 +60,21 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame(input) {
     playRound(input, getComputerChoice());
+
+    isGameOver();
+}
+
+function isGameOver() {
+    if (playerScore === 5 || compScore === 5) {
+        if (playerScore > compScore) { alert('Player wins!'); }
+        else { alert('Computer wins!'); }
+
+        playerScore = 0;
+        compScore = 0;
+        updateScoreboard('', '');
+
+        return true;
+    }
 }
 
 const rockbutton = document.querySelector('#rock');
