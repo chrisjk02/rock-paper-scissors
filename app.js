@@ -81,23 +81,6 @@ function playGame() {
     btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice()) });
     btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice()) });
 
-    // for (let i = 1; i < 6; i++) {
-    //     let input = prompt("Rock, paper or scissors?");
-
-    //     console.log(`***** Round ${i} *****`)
-    //     let roundWinner = playRound(input, getComputerChoice());
-    //     console.log(`Winner of R${i}: ${roundWinner}`);
-
-    //     if (roundWinner === 'Player') {
-    //         playerScore += 1;
-    //     } else if (roundWinner === 'Computer') {
-    //         compScore += 1;
-    //     }
-
-    //     console.log(`Player: ${playerScore}`);
-    //     console.log(`Computer: ${compScore}`);
-    // }
-
 }
 
 playGame();
