@@ -50,12 +50,15 @@ function playGame() {
 
     const btnRock = document.createElement('button');
     btnRock.innerText = 'Rock';
+    btnRock.value = 'rock';
     content.appendChild(btnRock);
     const btnPaper = document.createElement('button');
     btnPaper.innerText = 'Paper';
+    btnPaper.value = 'paper';
     content.appendChild(btnPaper);
     const btnScissors = document.createElement('button');
     btnScissors.innerText = 'Scissors';
+    btnScissors.value = 'scissors';
     content.appendChild(btnScissors);
 
     // for (let i = 1; i < 6; i++) {
