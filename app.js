@@ -23,23 +23,29 @@ function playRound(playerSelection, computerSelection) {
         return 'Tie!';
     } else if (playerSelection === 'rock') {
         if (computerSelection === 'scissors') {
+            playerScore += 1;
             return 'Player';
         }
         else {
+            compScore += 1;
             return 'Computer'
         };
     } else if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
+            playerScore += 1;
             return 'Player';
         }
         else {
+            compScore += 1;
             return 'Computer';
         }
     } else {
         if (computerSelection === 'paper') {
+            playerScore += 1;
             return 'Player';
         }
         else {
+            compScore += 1;
             return 'Computer';
         }
     }
@@ -48,7 +54,6 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame() {
     const content = document.querySelector('.container');
-
 
     const btnRock = document.createElement('button');
     btnRock.innerText = 'Rock';
@@ -68,6 +73,8 @@ function playGame() {
     btnRock.addEventListener('click', () => { playRound(btnRock.value, getComputerChoice()) });
     btnPaper.addEventListener('click', () => { playRound(btnPaper.value, getComputerChoice()) });
     btnScissors.addEventListener('click', () => { playRound(btnScissors.value, getComputerChoice()) });
+
+
 
     // for (let i = 1; i < 6; i++) {
     //     let input = prompt("Rock, paper or scissors?");
