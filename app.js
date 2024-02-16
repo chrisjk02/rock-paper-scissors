@@ -30,16 +30,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function selectionToNum(selection) {
-    if (selection === 'rock') {
-        return 0;
-    } else if (selection === 'paper') {
-        return 1;
-    } else if (selection === 'scissors') {
-        return 2;
-    }
-}
-
 function playGame() {
     let playerScore = 0;
     let compScore = 0;
