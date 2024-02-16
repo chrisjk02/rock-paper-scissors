@@ -73,7 +73,7 @@ paperbutton.addEventListener('click', e => {
     playGame(input);
 });
 const scissorsbutton = document.querySelector('#scissors');
-scissorsbuttonkbutton.addEventListener('click', e => {
+scissorsbutton.addEventListener('click', e => {
     let input = scissorsbuttonbutton.value = 'rock';
     playGame(input);
 });
